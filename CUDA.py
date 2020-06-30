@@ -2,17 +2,17 @@ import pycuda
 import pycuda.driver as drv
 drv.init()
 
-print 'CUDA device query (PyCUDA version) \n'
+print ('CUDA device query (PyCUDA version)', '\n')
 
-print 'Detected {} CUDA Capable device(s) \n'.format(drv.Device.count())
+print ('Detected {} CUDA Capable device(s)', '\n'.format(drv.Device.count()))
 
 for i in range(drv.Device.count()):
     
     gpu_device = drv.Device(i)
-    print 'Device {}: {}'.format( i, gpu_device.name() ) 
+    print ('Device {}: {}'.format( i, gpu_device.name()))
     compute_capability = float( '%d.%d' % gpu_device.compute_capability() )
-    print '\t Compute Capability: {}'.format(compute_capability)
-    print '\t Total Memory: {} megabytes'.format(gpu_device.total_memory()//(1024**2))
+    print ('\t Compute Capability: {}'.format(compute_capability))
+    print ('\t Total Memory: {} megabytes'.format(gpu_device.total_memory()//(1024**2)))
     
     # The following will give us all remaining device attributes as seen 
     # in the original deviceQuery.
@@ -34,12 +34,12 @@ for i in range(drv.Device.count()):
     
     cuda_cores_per_mp = { 5.0 : 128, 5.1 : 128, 5.2 : 128, 6.0 : 64, 6.1 : 128, 6.2 : 128}[compute_capability]
     
-    print '\t ({}) Multiprocessors, ({}) CUDA Cores / Multiprocessor: {} CUDA Cores'.format(num_mp, cuda_cores_per_mp, num_mp*cuda_cores_per_mp)
+    print ('\t ({}) Multiprocessors, ({}) CUDA Cores / Multiprocessor: {} CUDA Cores'.format(num_mp, cuda_cores_per_mp, num_mp*cuda_cores_per_mp))
     
     device_attributes.pop('MULTIPROCESSOR_COUNT')
     
     for k in device_attributes.keys():
-        print '\t {}: {}'.format(k, device_attributes[k])
+        print ('\t {}: {}'.format(k, device_attributes[k]))
         
-        
+# Editted by Henry Le on Jun 2020 to run with Python 3        
 # Thanks to https://github.com/PacktPublishing/Hands-On-GPU-Programming-with-Python-and-CUDA/blob/master/Chapter03/deviceQuery.py
