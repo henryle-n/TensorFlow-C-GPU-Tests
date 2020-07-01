@@ -1,20 +1,34 @@
-# TensorFlow-C/GPU-Tests
+# TensorFlow-C/GPU-Benchmark
 ## Background
-Out of my curiosity for hardware speed in the world of Machine Learning (ML), I want to validate the statement that many ML / AI Engineers made all over the internet: Traning models on GPU is 5-10+ (pending on the model) faster than on CPU. I set up a simple Jupyter Notebook with two kernels (run on two different venv, one utilizes only cpu, and the other utilizes only GPU). TensorFlow training time by utilizing CPU vs. GPU is then clocked and printed out for comparison.
+Out of my curiosity for hardware speed in the world of Machine Learning (ML), I want to validate the statement that many ML / AI Engineers made all over the internet: Traning models on GPU could be 5-10+ times faster than on CPU (pending on CPU/ GPU models). 
 
-## Benefit of ML with GPU
+So in this mini-project, I set up a simple Jupyter Notebook with two kernels (run on two different venv, one utilizes only cpu, and the other utilizes only GPU). TensorFlow training time by utilizing CPU vs. GPU is then clocked and printed out for comparison.
+
+<br>
+
+![i7 vs. rtx 2070 Super](Img/readme.png)
+
+
+## Observation
+* Model trained time with:
+    * CPU :: 13.4 minutes
+    * GPU :: 1.6 minutes
+
+* The difference is :: GPU computed 8.4 times faster than CPU
+* Note: ***.Adam()*** optimization package was used in both cases
+## Benefit of ML by GPU
 CPU is the brain of our computing devices, no matter if it is a high-end server, a desktop, or a laptop, or just a simple tablet. Utilizing GPU for ML brought benefits including: 
 * Faster model training
 * Freeing up CPU resources for other tasks/ processes that GPU can't be utilized
 
 ## Differences between GPU and CPU:
-* CPU has few complicated cores (4x2 in this set up) which run processes sequentially, with a few threads at a time 
-* GPU has more cores which allow parallel computing with thousands of threads at a time.
-* In deep learning, the host code runs on CPU where as CUDA code runs on GPU.
+* CPU has fewer cores (4 x 2 with i7-7700K) which run processes sequentially, a few threads at a time
+* GPU has more cores (40 x 64 with RTX 2070 SUPER) which allow parallel computing with thousands of threads at a time
+* In deep learning, the host code runs on CPU where as CUDA code runs on GPU
 * GPU is bandwidth optimized (carry multiple large size packages, in trade-off for speed)
 * CPU is latency (i.e. memory/RAM access time, high speed but fewer and smaller packages) optimized
 * Bandwidth of GPU is significantly larger than that of CPU, thanks to the VRAM
-* Thread parallelism in GPU surpasses the latency, 
+* The GPU capability of *Thread Parallelism* in GPU surpasses the latency
 
 ## Data Set-up:
 * Utilizing MNIST Dataset: http://yann.lecun.com/exdb/mnist/
@@ -47,3 +61,4 @@ CPU is the brain of our computing devices, no matter if it is a high-end server,
     * Memory Interface Width:	256-Bit
     * Memory Bandwidth:	448 GB/s
     * Full Specs: <a href="https://www.msi.com/Graphics-card/GeForce-RTX-2070-GAMING-X-8G/Specification">MSI Website</a>
+
