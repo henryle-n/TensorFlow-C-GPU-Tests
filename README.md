@@ -16,7 +16,7 @@ So in this mini-project, I set up a simple Jupyter Notebook with two kernels (ru
 
 * The difference is :: GPU computed 8.4 times faster than CPU
 * Note: ***.Adam()*** optimization package was used in both cases
-## Benefit of ML by GPU
+## Benefit of Deep Learning by GPU
 CPU is the brain of our computing devices, no matter if it is a high-end server, a desktop, or a laptop, or just a simple tablet. Utilizing GPU for ML brought benefits including: 
 * Faster model training
 * Freeing up CPU resources for other tasks/ processes that GPU can't be utilized
@@ -29,6 +29,13 @@ CPU is the brain of our computing devices, no matter if it is a high-end server,
 * CPU is latency (i.e. memory/RAM access time, high speed but fewer and smaller packages) optimized
 * Bandwidth of GPU is significantly larger than that of CPU, thanks to the VRAM
 * The GPU capability of *Thread Parallelism* in GPU surpasses the latency
+
+CPU | GPU
+----- | ------
+Several cores   | Many cores (a lot more)
+Low latency | High throughput
+Good for serial processing | Good for parallel processing
+Can do a handful of operations at once | Can do thousands of operations at once
 
 ## Data Set-up:
 * Utilizing MNIST Dataset: http://yann.lecun.com/exdb/mnist/
@@ -62,3 +69,13 @@ CPU is the brain of our computing devices, no matter if it is a high-end server,
     * Memory Bandwidth:	448 GB/s
     * Full Specs: <a href="https://www.msi.com/Graphics-card/GeForce-RTX-2070-GAMING-X-8G/Specification">MSI Website</a>
 
+## Operation Pictures
+* GPU
+
+![i7 vs. rtx 2070 Super](Img/GPU-Load.png)
+
+<br>
+
+* CPU
+
+![i7 vs. rtx 2070 Super](Img/CPU-Load.jpg)
