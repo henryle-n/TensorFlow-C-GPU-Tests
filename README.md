@@ -69,7 +69,7 @@ Can do a handful of operations at once | Can do thousands of operations at once
     * Memory Bandwidth:	448 GB/s
     * Full Specs: <a href="https://www.msi.com/Graphics-card/GeForce-RTX-2070-GAMING-X-8G/Specification">MSI Website</a>
 
-## Operation Pictures
+## Operations Pictures
 * GPU
 
 ![i7 vs. rtx 2070 Super](Img/GPU-Load.png)
