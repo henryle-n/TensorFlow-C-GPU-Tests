@@ -94,9 +94,10 @@ conda create -n <any_name_you_want_NO_space> tensorflow-gpu
 conda activate <name_you_put_above>
 conda install jupyter
 python -m ipykernel install --user --name=<any_name_you_want_NO_space>
-conda deactivate
 ```  
-NOTE: the kernel name above will be the kernel to use GPU for computing
+* To check if GPU is ready for usage, run the file ```CUDA.py```, you should see all information about your GPU
+* Deactivate this venv to install CPU venv ```conda deactivate``` 
+NOTE: the kernel named above will be the kernel to use GPU for computing
 
 ### For using CPU:
 ```
@@ -106,11 +107,17 @@ conda install jupyter
 python -m ipykernel install --user --name=<any_name_you_want_NO_space>
 jupyter notebook
 ```
-* If you've done everything correctly, when Jupyter Notebook is run, you will see both of these kernels available to use
+NOTE: the kernel you named above will be the kernel to use GPU for computing
+* If you've done everything correctly, when Jupyter Notebook is run, you will see both of these kernels are available to use
 
 ### Run the tests
-* 
-
+* Select one of the kernel that you want to run first, CPU or GPU doesn't matter
+* Run the Jupyter Notebook on one kernel
+* You will see the error on the ```break-here``` code. I purposedly leave it there so you can switch kernel and still keep the results of the previous kernel
+* At this point, it's up to you if you want to keep the output of previous run or not
+	* If you do: select the other kernel, re-run line by line until before you reach the function ```train_model(30)```. Skip this line, and go past ```break-here```, and run the ```train_model(30)``` below it
+	* If you don't, simply hit run all
+	
 ## Operations Pictures
  GPU | CPU
 ---- | ----
