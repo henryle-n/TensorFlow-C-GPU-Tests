@@ -96,7 +96,8 @@ conda install jupyter
 python -m ipykernel install --user --name=<any_name_you_want_NO_space>
 ```  
 * To check if GPU is ready for usage, run the file ```CUDA.py```, you should see all information about your GPU
-* Deactivate this venv to install CPU venv ```conda deactivate``` 
+* Deactivate this venv to install CPU venv: ```conda deactivate```   
+
 NOTE: the kernel named above will be the kernel to use GPU for computing
 
 ### For using CPU:
@@ -106,7 +107,8 @@ conda activate <name_you_put_above>
 conda install jupyter
 python -m ipykernel install --user --name=<any_name_you_want_NO_space>
 jupyter notebook
-```
+```  
+
 NOTE: the kernel you named above will be the kernel to use GPU for computing
 * If you've done everything correctly, when Jupyter Notebook is run, you will see both of these kernels are available to use
 
