@@ -13,13 +13,13 @@ So in this mini-project, I set up a simple Jupyter Notebook with two kernels (ru
 * Model trained time (in minutes):
 
 Iteration | CPU | GPU | Difference (times)
------ | ------ | ------ | -------
-1 |  | 1.193 |   
-2 |  | 1.158 |   
-3 |  | 1.252 |   
+:-----: | :-----: | :-----: | :-----:
+1 | 12.837 | 1.193 | **10.76x**  
+2 | 12.620 | 1.158 | **10.90x**
+3 | 12.502 | 1.252 | **9.99x**
 
 
-* The difference is :: GPU computed average 8.4 times faster than CPU
+* The difference is :: GPU computed average **10.55** times faster than CPU after 3 trials
 * Note: ***.Adam()*** optimization was used in both cases
 
 
