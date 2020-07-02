@@ -15,7 +15,9 @@ So in this mini-project, I set up a simple Jupyter Notebook with two kernels (ru
     * GPU :: 1.6 minutes
 
 * The difference is :: GPU computed 8.4 times faster than CPU
-* Note: ***.Adam()*** optimization package was used in both cases
+* Note: ***.Adam()*** optimization was used in both cases
+
+
 ## Benefit of Deep Learning by GPU
 CPU is the brain of our computing devices, no matter if it is a high-end server, a desktop, or a laptop, or just a simple tablet. Utilizing GPU for ML brought benefits including: 
 * Faster model training
@@ -44,6 +46,18 @@ Can do a handful of operations at once | Can do thousands of operations at once
 * 30 Epochs were run for comparison
 
 ## Hardware:
+
+ CPU Intel i7-7700K |  GPU NVIDIA RTX 2070 SUPER
+---------|---------
+  ![i7 vs. rtx 2070 Super](Img/setup4.jpg) | ![i7 vs. rtx 2070 Super](Img/setup2.jpg) 
+
+<br>
+
+View 1  |  View 2 
+---------|---------
+ ![i7 vs. rtx 2070 Super](Img/setup0.jpg) | ![i7 vs. rtx 2070 Super](Img/setup1.jpg) 
+
+
 * Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
 	* Base speed:	4.20 GHz
 	* Full speed:	4.49 GHz (on-load Turbo Boost)
@@ -70,12 +84,6 @@ Can do a handful of operations at once | Can do thousands of operations at once
     * Full Specs: <a href="https://www.msi.com/Graphics-card/GeForce-RTX-2070-GAMING-X-8G/Specification">MSI Website</a>
 
 ## Operations Pictures
-* GPU
-
-![i7 vs. rtx 2070 Super](Img/GPU-Load.png)
-
-<br>
-
-* CPU
-
-![i7 vs. rtx 2070 Super](Img/CPU-Load.jpg)
+ GPU | CPU
+---- | ----
+![i7 vs. rtx 2070 Super](Img/GPU-Load.png) | ![i7 vs. rtx 2070 Super](Img/CPU-Load.jpg)
