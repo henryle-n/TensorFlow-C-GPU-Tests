@@ -10,7 +10,7 @@ So in this mini-project, I set up a simple Jupyter Notebook with two kernels (ru
 
 
 ## Observation
-* Model trained time:
+* Model trained time (in minutes):
 
 Iteration | CPU | GPU | Difference
 ----- | ------ | ------ | -------
