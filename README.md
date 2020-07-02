@@ -83,6 +83,15 @@ View 1  |  View 2
     * Memory Bandwidth:	448 GB/s
     * Full Specs: <a href="https://www.msi.com/Graphics-card/GeForce-RTX-2070-GAMING-X-8G/Specification">MSI Website</a>
 
+## Steps  
+### For using GPU:
+* Follow these steps from Anaconda: <a href="https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/">Website</a> 
+* Then:
+```conda activate <env_name>
+conda install jupyter
+python -m ipykernel install --user --name=<kernel_name>```  
+
+
 ## Operations Pictures
  GPU | CPU
 ---- | ----
