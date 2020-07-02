@@ -113,10 +113,10 @@ NOTE: the kernel you named above will be the kernel to use GPU for computing
 ### Run the tests
 * Select one of the kernel that you want to run first, CPU or GPU doesn't matter
 * Run the Jupyter Notebook on one kernel
-* You will see the error on the ```break-here``` code. I purposedly leave it there so you can switch kernel and still keep the results of the previous kernel
-* At this point, it's up to you if you want to keep the output of previous run or not
+* You will see the error on the ```break-here``` code. I purposedly leave it there so you can switch kernel and still keep the results of the previous kernel (if you want)
+* At this point, it's up to you if you want to keep the output of the previous run or not
 	* If you do: select the other kernel, re-run line by line until before you reach the function ```train_model(30)```. Skip this line, and go past ```break-here```, and run the ```train_model(30)``` below it
-	* If you don't, simply hit run all
+	* If you don't, simply hit run all, and the previous results will be overriden
 	
 ## Operations Pictures
  GPU | CPU
