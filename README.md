@@ -84,13 +84,32 @@ View 1  |  View 2
     * Full Specs: <a href="https://www.msi.com/Graphics-card/GeForce-RTX-2070-GAMING-X-8G/Specification">MSI Website</a>
 
 ## Steps  
-### For using GPU:
-* Follow these steps from Anaconda: <a href="https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/">Website</a> 
-* Then:
-```conda activate <env_name>
-conda install jupyter
-python -m ipykernel install --user --name=<kernel_name>```  
+* First thing first, make sure you have <a href="https://www.anaconda.com/products/individual">Anaconda</a> or <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> installed
 
+### For using GPU:
+* Documentations: <a href="https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/"> Anaconda Website</a> 
+* Follow these steps:
+```
+conda create -n <any_name_you_want_NO_space> tensorflow-gpu
+conda activate <name_you_put_above>
+conda install jupyter
+python -m ipykernel install --user --name=<any_name_you_want_NO_space>
+conda deactivate
+```  
+NOTE: the kernel name above will be the kernel to use GPU for computing
+
+### For using CPU:
+```
+conda create -n <any_name_you_want_NO_space> tensorflow
+conda activate <name_you_put_above>
+conda install jupyter
+python -m ipykernel install --user --name=<any_name_you_want_NO_space>
+jupyter notebook
+```
+* If you've done everything correctly, when Jupyter Notebook is run, you will see both of these kernels available to use
+
+### Run the tests
+* 
 
 ## Operations Pictures
  GPU | CPU
