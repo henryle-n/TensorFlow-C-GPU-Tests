@@ -10,9 +10,14 @@ So in this mini-project, I set up a simple Jupyter Notebook with two kernels (ru
 
 
 ## Observation
-* Model trained time with:
-    * CPU :: 13.4 minutes
-    * GPU :: 1.6 minutes
+* Model trained time:
+
+Iteration | CPU | GPU | Difference
+----- | ------ | ------ | -------
+1 |  | 1.193 |  | 
+2 |  | 1.158 |  | 
+3 |  | 1.252 |  | 
+
 
 * The difference is :: GPU computed 8.4 times faster than CPU
 * Note: ***.Adam()*** optimization was used in both cases
